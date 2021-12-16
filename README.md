@@ -40,5 +40,13 @@ function gw {
     echo $prompt
 }
 
-PS1="\u@\h:\$(gw)$ "
+# plain prompt
+#PS1="\u@\h:\$(gw)$ "
+
+# debian colour prompt
+PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\$(gw)\[\033[00m\]\$ "
 ```
+
+The git repo info will be shown inline.
+
+`robsta@ATLT0551:~/WSL2-Linux-Kernel[linux-msft-wsl-5.10.74.3]/arch/x86/boot$`
